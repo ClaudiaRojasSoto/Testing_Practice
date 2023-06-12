@@ -166,6 +166,6 @@ Feel free to check the [issues page](https://github.com/ClaudiaRojasSoto/testing
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT licensed](https://github.com/ClaudiaRojasSoto/testing-practice/blob/main/MIT.md).
+This project is [MIT licensed](https://github.com/ClaudiaRojasSoto/testing_practice/blob/master/MIT.md).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
