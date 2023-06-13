@@ -11,22 +11,30 @@ function reverseString(string) {
 }
 
 class Calculator {
-  add() {
+  add(a, b) {
+    this.a = a;
+    this.b = b;
     return this.a + this.b;
   }
 
-  subtract() {
+  subtract(a, b) {
+    this.a = a;
+    this.b = b;
     return this.a - this.b;
   }
 
-  divide() {
+  divide(a, b) {
+    this.a = a;
+    this.b = b;
     if (this.b === 0) {
       throw new Error('Division by zero Error');
     }
     return this.a / this.b;
   }
 
-  multiply() {
+  multiply(a, b) {
+    this.a = a;
+    this.b = b;
     return this.a * this.b;
   }
 }
