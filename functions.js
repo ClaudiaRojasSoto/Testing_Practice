@@ -1,4 +1,4 @@
-export function stringLength(string) {
+function stringLength(string) {
     const length = string.length;
     if (length < 1 || length > 10) {
       throw new Error('Invalid string length');
@@ -6,11 +6,11 @@ export function stringLength(string) {
     return length;
   }
   
-  export function reverseString(string) {
+  function reverseString(string) {
     return [...string].reverse().join('');
   }
   
-  export class Calculator {
+  class Calculator {
     add(a, b) {
       return a + b;
     }
@@ -31,7 +31,14 @@ export function stringLength(string) {
     }
   }
   
-  export function capitalize(string) {
+  function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
+  
+  module.exports = {
+    stringLength,
+    reverseString,
+    Calculator,
+    capitalize,
+  };
   
