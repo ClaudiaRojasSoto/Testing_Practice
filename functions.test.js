@@ -53,3 +53,8 @@ const {
     expect(capitalize('hello')).toBe('Hello');
   });
   
+
+  test('returns an empty string when input is empty', () => {
+    expect(capitalize('')).toBe('');
+  });
+  
