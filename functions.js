@@ -1,48 +1,46 @@
 function stringLength(string) {
-    const length = string.length;
-    if (length < 1 || length > 10) {
-      throw new Error('Invalid string length');
-    }
-    return length;
+  const { length } = string;
+  if (length < 1 || length > 10) {
+    throw new Error('Invalid string length');
   }
-  
-  function reverseString(string) {
-    return [...string].reverse().join('');
+  return length;
+}
+
+function reverseString(string) {
+  return [...string].reverse().join('');
+}
+
+class Calculator {
+  add() {
+    return this.a + this.b;
   }
-  
-  class Calculator {
-    add(a, b) {
-      return a + b;
-    }
-  
-    subtract(a, b) {
-      return a - b;
-    }
-  
-    divide(a, b) {
-      if (b === 0) {
-        throw new Error('Division by zero Error');
-      }
-      return a / b;
-    }
-  
-    multiply(a, b) {
-      return a * b;
-    }
+
+  subtract() {
+    return this.a - this.b;
   }
-  
-  function capitalize(string) {
-    if (typeof string !== 'string') {
-      throw new Error('Input should be a string');
+
+  divide() {
+    if (this.b === 0) {
+      throw new Error('Division by zero Error');
     }
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    return this.a / this.b;
   }
-  
-  
-  module.exports = {
-    stringLength,
-    reverseString,
-    Calculator,
-    capitalize,
-  };
-  
+
+  multiply() {
+    return this.a * this.b;
+  }
+}
+
+function capitalize(string) {
+  if (typeof string !== 'string') {
+    throw new Error('Input should be a string');
+  }
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+module.exports = {
+  stringLength,
+  reverseString,
+  Calculator,
+  capitalize,
+};
